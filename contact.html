@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — Waves Perfume</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="container">
+    <header class="header"><div class="brand">WAVES PERFUME</div><nav><a class="link" href="index.html">Home</a> · <a class="link" href="products.html">Products</a> · <a class="link" href="buy.html">Buy</a> · <a class="link" href="contact.html">Contact</a></nav></header>
+
+    <h2>Contact Us</h2>
+    <div class="card">
+      <form id="contactForm">
+        <label>Name<input name="name" required></label>
+        <label>Email<input name="email" required></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+          <button type="button" class="ghost" id="contactCancel">Cancel</button>
+          <button type="button" class="buy" id="contactSend">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">© 2025 Waves Perfume — Killer X Collection</footer>
+  </div>
+
+<script>
+document.getElementById('contactSend').addEventListener('click', ()=>{
+  const f = document.getElementById('contactForm'); if(!f.name.value||!f.email.value||!f.message.value){ alert('Fill all fields'); return; }
+  alert('Thanks! Your message has been sent (simulated).');
+  f.reset();
+});
+document.getElementById('contactCancel').addEventListener('click', ()=>{ document.getElementById('contactForm').reset(); });
+</script>
+</body>
+</html>
